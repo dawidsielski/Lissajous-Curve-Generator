@@ -23,7 +23,7 @@ namespace lissajous
             drawArea.Clear(Color.White);
             float x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 
-            Pen blackPen = new Pen(Color.Black, 3);
+            Pen blackPen = new Pen(Color.Black, 1);
 
             float x_amp, x_freq, x_angle, y_amp, y_freq, y_angle;
             x_amp = Convert.ToInt16(x_amplitude.Value);
