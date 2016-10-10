@@ -48,6 +48,12 @@ namespace lissajous
                 x2 = x1;
                 y2 = y1;
             }
+            //this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
