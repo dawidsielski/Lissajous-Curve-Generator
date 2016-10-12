@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.y_amplitude = new System.Windows.Forms.NumericUpDown();
             this.x_phase = new System.Windows.Forms.NumericUpDown();
@@ -38,11 +39,12 @@
             this.drawButton = new System.Windows.Forms.Button();
             this.y_phase = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.header = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
+            this.header = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.y_amplitude)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_phase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_frequency)).BeginInit();
@@ -64,7 +66,7 @@
             0,
             0});
             this.y_amplitude.Name = "y_amplitude";
-            this.y_amplitude.Size = new System.Drawing.Size(55, 20);
+            this.y_amplitude.Size = new System.Drawing.Size(54, 20);
             this.y_amplitude.TabIndex = 6;
             this.y_amplitude.Value = new decimal(new int[] {
             200,
@@ -76,7 +78,7 @@
             // 
             this.x_phase.Location = new System.Drawing.Point(102, 141);
             this.x_phase.Name = "x_phase";
-            this.x_phase.Size = new System.Drawing.Size(55, 20);
+            this.x_phase.Size = new System.Drawing.Size(54, 20);
             this.x_phase.TabIndex = 5;
             this.x_phase.Value = new decimal(new int[] {
             1,
@@ -88,7 +90,7 @@
             // 
             this.x_frequency.Location = new System.Drawing.Point(102, 115);
             this.x_frequency.Name = "x_frequency";
-            this.x_frequency.Size = new System.Drawing.Size(55, 20);
+            this.x_frequency.Size = new System.Drawing.Size(54, 20);
             this.x_frequency.TabIndex = 4;
             this.x_frequency.Value = new decimal(new int[] {
             3,
@@ -111,7 +113,7 @@
             // 
             this.y_frequency.Location = new System.Drawing.Point(102, 193);
             this.y_frequency.Name = "y_frequency";
-            this.y_frequency.Size = new System.Drawing.Size(55, 20);
+            this.y_frequency.Size = new System.Drawing.Size(54, 20);
             this.y_frequency.TabIndex = 7;
             this.y_frequency.Value = new decimal(new int[] {
             4,
@@ -128,7 +130,7 @@
             0,
             0});
             this.x_amplitude.Name = "x_amplitude";
-            this.x_amplitude.Size = new System.Drawing.Size(55, 20);
+            this.x_amplitude.Size = new System.Drawing.Size(54, 20);
             this.x_amplitude.TabIndex = 3;
             this.x_amplitude.Value = new decimal(new int[] {
             200,
@@ -151,7 +153,7 @@
             // 
             this.y_phase.Location = new System.Drawing.Point(102, 219);
             this.y_phase.Name = "y_phase";
-            this.y_phase.Size = new System.Drawing.Size(55, 20);
+            this.y_phase.Size = new System.Drawing.Size(54, 20);
             this.y_phase.TabIndex = 8;
             this.y_phase.Value = new decimal(new int[] {
             1,
@@ -175,16 +177,6 @@
             this.panel1.Size = new System.Drawing.Size(258, 665);
             this.panel1.TabIndex = 9;
             // 
-            // panel2
-            // 
-            this.panel2.AccessibleDescription = "Name & Logo";
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(258, 60);
-            this.panel2.TabIndex = 0;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.drawButton);
@@ -194,10 +186,20 @@
             this.panel3.Size = new System.Drawing.Size(258, 78);
             this.panel3.TabIndex = 1;
             // 
+            // panel2
+            // 
+            this.panel2.AccessibleDescription = "Name & Logo";
+            this.panel2.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(258, 60);
+            this.panel2.TabIndex = 0;
+            // 
             // panel4
             // 
             this.panel4.AccessibleDescription = "Panel";
-            this.panel4.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel4.BackColor = System.Drawing.Color.HotPink;
             this.panel4.Controls.Add(this.exit);
             this.panel4.Controls.Add(this.header);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -206,19 +208,9 @@
             this.panel4.Size = new System.Drawing.Size(734, 60);
             this.panel4.TabIndex = 10;
             // 
-            // header
-            // 
-            this.header.AutoSize = true;
-            this.header.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.header.Location = new System.Drawing.Point(18, 9);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(357, 36);
-            this.header.TabIndex = 0;
-            this.header.Text = "Lissaus Curve Generator";
-            // 
             // exit
             // 
-            this.exit.BackColor = System.Drawing.Color.BlueViolet;
+            this.exit.BackColor = System.Drawing.Color.Transparent;
             this.exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.exit.FlatAppearance.BorderSize = 0;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -230,6 +222,20 @@
             this.exit.TabIndex = 1;
             this.exit.UseVisualStyleBackColor = false;
             this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // header
+            // 
+            this.header.AutoSize = true;
+            this.header.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.header.Location = new System.Drawing.Point(18, 9);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(357, 36);
+            this.header.TabIndex = 0;
+            this.header.Text = "Lissaus Curve Generator";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
             // 
             // Form1
             // 
@@ -274,6 +280,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
