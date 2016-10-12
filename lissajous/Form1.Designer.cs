@@ -45,6 +45,7 @@
             this.exit = new System.Windows.Forms.Button();
             this.header = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.rotate_check_box = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.y_amplitude)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_phase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_frequency)).BeginInit();
@@ -59,14 +60,14 @@
             // 
             // y_amplitude
             // 
-            this.y_amplitude.Location = new System.Drawing.Point(102, 167);
+            this.y_amplitude.Location = new System.Drawing.Point(98, 167);
             this.y_amplitude.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.y_amplitude.Name = "y_amplitude";
-            this.y_amplitude.Size = new System.Drawing.Size(54, 20);
+            this.y_amplitude.Size = new System.Drawing.Size(58, 20);
             this.y_amplitude.TabIndex = 6;
             this.y_amplitude.Value = new decimal(new int[] {
             200,
@@ -76,9 +77,9 @@
             // 
             // x_phase
             // 
-            this.x_phase.Location = new System.Drawing.Point(102, 141);
+            this.x_phase.Location = new System.Drawing.Point(98, 141);
             this.x_phase.Name = "x_phase";
-            this.x_phase.Size = new System.Drawing.Size(54, 20);
+            this.x_phase.Size = new System.Drawing.Size(58, 20);
             this.x_phase.TabIndex = 5;
             this.x_phase.Value = new decimal(new int[] {
             1,
@@ -88,9 +89,9 @@
             // 
             // x_frequency
             // 
-            this.x_frequency.Location = new System.Drawing.Point(102, 115);
+            this.x_frequency.Location = new System.Drawing.Point(98, 115);
             this.x_frequency.Name = "x_frequency";
-            this.x_frequency.Size = new System.Drawing.Size(54, 20);
+            this.x_frequency.Size = new System.Drawing.Size(58, 20);
             this.x_frequency.TabIndex = 4;
             this.x_frequency.Value = new decimal(new int[] {
             3,
@@ -111,9 +112,9 @@
             // 
             // y_frequency
             // 
-            this.y_frequency.Location = new System.Drawing.Point(102, 193);
+            this.y_frequency.Location = new System.Drawing.Point(98, 193);
             this.y_frequency.Name = "y_frequency";
-            this.y_frequency.Size = new System.Drawing.Size(54, 20);
+            this.y_frequency.Size = new System.Drawing.Size(58, 20);
             this.y_frequency.TabIndex = 7;
             this.y_frequency.Value = new decimal(new int[] {
             4,
@@ -123,14 +124,14 @@
             // 
             // x_amplitude
             // 
-            this.x_amplitude.Location = new System.Drawing.Point(102, 89);
+            this.x_amplitude.Location = new System.Drawing.Point(98, 89);
             this.x_amplitude.Maximum = new decimal(new int[] {
             100000,
             0,
             0,
             0});
             this.x_amplitude.Name = "x_amplitude";
-            this.x_amplitude.Size = new System.Drawing.Size(54, 20);
+            this.x_amplitude.Size = new System.Drawing.Size(58, 20);
             this.x_amplitude.TabIndex = 3;
             this.x_amplitude.Value = new decimal(new int[] {
             200,
@@ -151,9 +152,9 @@
             // 
             // y_phase
             // 
-            this.y_phase.Location = new System.Drawing.Point(102, 219);
+            this.y_phase.Location = new System.Drawing.Point(98, 219);
             this.y_phase.Name = "y_phase";
-            this.y_phase.Size = new System.Drawing.Size(54, 20);
+            this.y_phase.Size = new System.Drawing.Size(58, 20);
             this.y_phase.TabIndex = 8;
             this.y_phase.Value = new decimal(new int[] {
             1,
@@ -163,6 +164,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.rotate_check_box);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.y_phase);
@@ -235,7 +237,18 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 10;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // rotate_check_box
+            // 
+            this.rotate_check_box.AutoSize = true;
+            this.rotate_check_box.Location = new System.Drawing.Point(98, 245);
+            this.rotate_check_box.Name = "rotate_check_box";
+            this.rotate_check_box.Size = new System.Drawing.Size(58, 17);
+            this.rotate_check_box.TabIndex = 9;
+            this.rotate_check_box.Text = "Rotate";
+            this.rotate_check_box.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -257,6 +270,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.x_amplitude)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.y_phase)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -281,6 +295,7 @@
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.CheckBox rotate_check_box;
     }
 }
 
