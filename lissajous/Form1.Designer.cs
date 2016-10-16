@@ -39,13 +39,13 @@
             this.drawButton = new System.Windows.Forms.Button();
             this.y_phase = new System.Windows.Forms.NumericUpDown();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rotate_check_box = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.Button();
             this.header = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rotate_check_box = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.y_amplitude)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_phase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.x_frequency)).BeginInit();
@@ -179,6 +179,16 @@
             this.panel1.Size = new System.Drawing.Size(258, 665);
             this.panel1.TabIndex = 9;
             // 
+            // rotate_check_box
+            // 
+            this.rotate_check_box.AutoSize = true;
+            this.rotate_check_box.Location = new System.Drawing.Point(98, 245);
+            this.rotate_check_box.Name = "rotate_check_box";
+            this.rotate_check_box.Size = new System.Drawing.Size(58, 17);
+            this.rotate_check_box.TabIndex = 9;
+            this.rotate_check_box.Text = "Rotate";
+            this.rotate_check_box.UseVisualStyleBackColor = true;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.drawButton);
@@ -237,18 +247,8 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // rotate_check_box
-            // 
-            this.rotate_check_box.AutoSize = true;
-            this.rotate_check_box.Location = new System.Drawing.Point(98, 245);
-            this.rotate_check_box.Name = "rotate_check_box";
-            this.rotate_check_box.Size = new System.Drawing.Size(58, 17);
-            this.rotate_check_box.TabIndex = 9;
-            this.rotate_check_box.Text = "Rotate";
-            this.rotate_check_box.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

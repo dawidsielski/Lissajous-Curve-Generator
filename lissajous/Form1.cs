@@ -13,15 +13,18 @@ namespace lissajous
     public partial class Form1 : Form
     {
         Graphics drawArea;
+        float x_angle;
         public Form1()
         {
             InitializeComponent();
             drawArea = drawingPlace.CreateGraphics();
+            timer1.Enabled = true;
 
         }
         private void button1_Click(object sender, EventArgs e)
         {
             draw_function(false);
+            rotate_check_box.Checked = false;
             //this.WindowState = FormWindowState.Minimized;
         }
 
@@ -33,9 +36,7 @@ namespace lissajous
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (rotate_check_box.Checked == true)
-            {
                 draw_function(true);
-            }
         }
 
         private void draw_function(bool rotate)
@@ -47,13 +48,20 @@ namespace lissajous
 
             Pen blackPen = new Pen(Color.Black, 1);
 
-            float x_amp, x_freq, x_angle, y_amp, y_freq, y_angle;
+            float x_amp, x_freq, y_amp, y_freq, y_angle;
             x_amp = Convert.ToInt16(x_amplitude.Value);
             x_freq = Convert.ToInt16(x_frequency.Value);
             if (!rotate)
                 x_angle = (Convert.ToSingle(Convert.ToSingle(x_phase.Value) * (Math.PI) / 180));
             else
-                x_angle = 23;
+            {
+                x_angle += Convert.ToSingle((Math.PI) / 180);
+                if (x_angle > 2 * Math.PI)
+                {
+                    x_angle = 0;
+                }
+            }
+
 
             y_amp = Convert.ToInt16(y_amplitude.Value);
             y_freq = Convert.ToInt16(y_frequency.Value);
