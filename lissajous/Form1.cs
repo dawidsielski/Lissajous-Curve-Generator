@@ -46,7 +46,7 @@ namespace lissajous
             float screen_width_center = drawingPlace.Size.Width / 2,
                   screen_height_center = drawingPlace.Size.Height / 2;
 
-            Pen blackPen = new Pen(Color.Black, 1);
+            Pen blackPen = new Pen(Color.Black, 2);
 
             float x_amp, x_freq, y_amp, y_freq, y_angle;
             x_amp = Convert.ToInt16(x_amplitude.Value);
@@ -69,7 +69,7 @@ namespace lissajous
 
             double t_max = Math.PI * 2 + Math.PI / 180, t;
 
-            for (t = 0; t <= t_max; t += Math.PI / 360)
+            for (t = 0; t <= t_max; t += Math.PI / 100)
             {
                 x1 = screen_width_center + Convert.ToSingle(x_amp * Math.Sin(x_freq * t + x_angle));
                 y1 = screen_height_center + Convert.ToSingle(y_amp * Math.Sin(y_freq * t + y_angle));
