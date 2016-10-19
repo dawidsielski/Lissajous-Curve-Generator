@@ -97,6 +97,11 @@ namespace lissajous
             togMove = false;
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void panel4_MouseMove(object sender, MouseEventArgs e)
         {
             if (togMove)

@@ -54,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.equation_1 = new System.Windows.Forms.Label();
             this.equation_2 = new System.Windows.Forms.Label();
+            this.minimalize = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.drawingPlace)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -121,7 +122,7 @@
             // 
             this.rotate_check_box.AutoSize = true;
             this.rotate_check_box.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rotate_check_box.Location = new System.Drawing.Point(75, 515);
+            this.rotate_check_box.Location = new System.Drawing.Point(93, 483);
             this.rotate_check_box.Name = "rotate_check_box";
             this.rotate_check_box.Size = new System.Drawing.Size(84, 25);
             this.rotate_check_box.TabIndex = 9;
@@ -132,6 +133,7 @@
             // 
             this.panel4.AccessibleDescription = "Panel";
             this.panel4.BackColor = System.Drawing.Color.Violet;
+            this.panel4.Controls.Add(this.minimalize);
             this.panel4.Controls.Add(this.exit);
             this.panel4.Controls.Add(this.header);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
@@ -191,7 +193,7 @@
             this.freq_x.Name = "freq_x";
             this.freq_x.Size = new System.Drawing.Size(158, 45);
             this.freq_x.TabIndex = 11;
-            this.freq_x.Value = 3;
+            this.freq_x.Value = 6;
             // 
             // phase_x
             // 
@@ -309,6 +311,7 @@
             // 
             // equation_1
             // 
+            this.equation_1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.equation_1.AutoSize = true;
             this.equation_1.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.equation_1.Location = new System.Drawing.Point(37, 196);
@@ -319,6 +322,7 @@
             // 
             // equation_2
             // 
+            this.equation_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.equation_2.AutoSize = true;
             this.equation_2.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.equation_2.Location = new System.Drawing.Point(37, 444);
@@ -326,6 +330,23 @@
             this.equation_2.Size = new System.Drawing.Size(140, 22);
             this.equation_2.TabIndex = 25;
             this.equation_2.Text = "equation form";
+            // 
+            // minimalize
+            // 
+            this.minimalize.BackColor = System.Drawing.Color.Transparent;
+            this.minimalize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.minimalize.FlatAppearance.BorderSize = 0;
+            this.minimalize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.minimalize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.minimalize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimalize.ForeColor = System.Drawing.Color.Black;
+            this.minimalize.Image = ((System.Drawing.Image)(resources.GetObject("minimalize.Image")));
+            this.minimalize.Location = new System.Drawing.Point(874, 3);
+            this.minimalize.Name = "minimalize";
+            this.minimalize.Size = new System.Drawing.Size(50, 51);
+            this.minimalize.TabIndex = 2;
+            this.minimalize.UseVisualStyleBackColor = false;
+            this.minimalize.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form1
             // 
@@ -379,6 +400,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label equation_1;
         private System.Windows.Forms.Label equation_2;
+        private System.Windows.Forms.Button minimalize;
     }
 }
 

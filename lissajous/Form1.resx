@@ -132,6 +132,18 @@
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="minimalize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAFjSURBVHhe7c5BigQxDEPRvv+le/Yi4bslGzLgB9qUcFSftdZaa6210Pefpd1p5OW0O428nHan
+        kZfTbnwgNP5/4wOh8f8bHwiN/9/4QGj8/9wBveuKoj7mDuhdVxT1MXdA77qiqI+5A3rXFUV9zB1w7xS9
+        Q33MHXDvFL1Dfcwd0LuuKOpj7oDedUVRH6MB7aejqI/RgPbTUdTHaED7W1z0DvUxGtD+Fhe9Q32MBm79
+        7fuv6B3qYzRw62/ff0XvUB+jAe1vcdE71MdoQPtbXPQO9TEa0H46ivoYDWg/HUV9jAZuvX7viqI+RgO3
+        Xr93RVEfowHqq9x33LsyGqC+yn3HvSujAeqr3HfcuzIaoL7Kfce9K6MB7btS5d6V0YD2Xaly78poQPuu
+        VLl3ZTSgfVeq3Luy8YHQ+P+ND4TG/298IDT+f+MDofH/04HX0+408nLanUZeTrvTyMtZa6211lrr6vP5
+        A+yee724Sg4mAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>47</value>
   </metadata>
