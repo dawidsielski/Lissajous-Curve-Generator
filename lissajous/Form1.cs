@@ -38,10 +38,17 @@ namespace lissajous
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (rotate_check_box.Checked == true)
+            {
                 calculate_points(true);
+                live_preview_check_box.Checked = false;
+            }
             equation_1.Text = "x = " + Convert.ToString(amplitude_x.Value) + " sin(" + Convert.ToString(freq_x.Value) + Convert.ToString("\u03C9") + " + " + Convert.ToString(phase_x.Value) + ")";
             equation_2.Text = "y = " + Convert.ToString(amplitude_y.Value) + " sin(" + Convert.ToString(freq_y.Value) + Convert.ToString("\u03C9") + " + " + Convert.ToString(phase_y.Value) + ")";
 
+            if (live_preview_check_box.Checked == true)
+            {
+                calculate_points(false);
+            }
         }
 
         private void calculate_points(bool rotate)
