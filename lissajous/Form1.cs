@@ -83,6 +83,7 @@ namespace lissajous
                 x = (screen_width_center + Convert.ToSingle(x_amp * Math.Sin(x_freq * t + x_angle)));
                 y = (screen_height_center + Convert.ToSingle(y_amp * Math.Sin(y_freq * t + y_angle)));
                 pointsList.Add(new PointF(x, y));
+                lissajous_chart.Series[0].Points.AddXY(x, y);
             }
 
             Bitmap plane = new Bitmap(drawingPlace.Width, drawingPlace.Height);

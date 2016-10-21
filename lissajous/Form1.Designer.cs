@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.drawingPlace = new System.Windows.Forms.PictureBox();
             this.drawButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,6 +59,7 @@
             this.exit = new System.Windows.Forms.Button();
             this.header = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lissajous_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.drawingPlace)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phase_y)).BeginInit();
@@ -65,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.freq_x)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amplitude_x)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lissajous_chart)).BeginInit();
             this.SuspendLayout();
             // 
             // drawingPlace
@@ -74,9 +79,9 @@
             this.drawingPlace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.drawingPlace.ErrorImage = null;
             this.drawingPlace.InitialImage = null;
-            this.drawingPlace.Location = new System.Drawing.Point(258, 60);
+            this.drawingPlace.Location = new System.Drawing.Point(453, 82);
             this.drawingPlace.Name = "drawingPlace";
-            this.drawingPlace.Size = new System.Drawing.Size(664, 605);
+            this.drawingPlace.Size = new System.Drawing.Size(344, 217);
             this.drawingPlace.TabIndex = 0;
             this.drawingPlace.TabStop = false;
             // 
@@ -361,12 +366,29 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // lissajous_chart
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.lissajous_chart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.lissajous_chart.Legends.Add(legend1);
+            this.lissajous_chart.Location = new System.Drawing.Point(276, 66);
+            this.lissajous_chart.Name = "lissajous_chart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.lissajous_chart.Series.Add(series1);
+            this.lissajous_chart.Size = new System.Drawing.Size(646, 588);
+            this.lissajous_chart.TabIndex = 11;
+            this.lissajous_chart.Text = "chart1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(922, 666);
+            this.Controls.Add(this.lissajous_chart);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.drawingPlace);
@@ -384,6 +406,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.amplitude_x)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lissajous_chart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,6 +438,7 @@
         private System.Windows.Forms.Label equation_2;
         private System.Windows.Forms.Button minimalize;
         private System.Windows.Forms.CheckBox live_preview_check_box;
+        private System.Windows.Forms.DataVisualization.Charting.Chart lissajous_chart;
     }
 }
 
