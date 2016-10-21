@@ -124,7 +124,7 @@
             // 
             this.live_preview_check_box.AutoSize = true;
             this.live_preview_check_box.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.live_preview_check_box.Location = new System.Drawing.Point(126, 493);
+            this.live_preview_check_box.Location = new System.Drawing.Point(114, 493);
             this.live_preview_check_box.Name = "live_preview_check_box";
             this.live_preview_check_box.Size = new System.Drawing.Size(126, 25);
             this.live_preview_check_box.TabIndex = 26;
@@ -289,7 +289,7 @@
             // 
             this.rotate_check_box.AutoSize = true;
             this.rotate_check_box.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rotate_check_box.Location = new System.Drawing.Point(15, 493);
+            this.rotate_check_box.Location = new System.Drawing.Point(24, 493);
             this.rotate_check_box.Name = "rotate_check_box";
             this.rotate_check_box.Size = new System.Drawing.Size(84, 25);
             this.rotate_check_box.TabIndex = 9;
