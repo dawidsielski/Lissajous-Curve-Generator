@@ -33,6 +33,7 @@
             this.drawingPlace = new System.Windows.Forms.PictureBox();
             this.drawButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.live_preview_check_box = new System.Windows.Forms.CheckBox();
             this.equation_2 = new System.Windows.Forms.Label();
             this.equation_1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.exit = new System.Windows.Forms.Button();
             this.header = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.live_preview_check_box = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.drawingPlace)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phase_y)).BeginInit();
@@ -74,9 +74,9 @@
             this.drawingPlace.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.drawingPlace.ErrorImage = null;
             this.drawingPlace.InitialImage = null;
-            this.drawingPlace.Location = new System.Drawing.Point(258, 59);
+            this.drawingPlace.Location = new System.Drawing.Point(258, 60);
             this.drawingPlace.Name = "drawingPlace";
-            this.drawingPlace.Size = new System.Drawing.Size(734, 604);
+            this.drawingPlace.Size = new System.Drawing.Size(664, 605);
             this.drawingPlace.TabIndex = 0;
             this.drawingPlace.TabStop = false;
             // 
@@ -86,7 +86,7 @@
             this.drawButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.drawButton.FlatAppearance.BorderSize = 0;
             this.drawButton.Font = new System.Drawing.Font("Century Gothic", 21.75F);
-            this.drawButton.Location = new System.Drawing.Point(0, 556);
+            this.drawButton.Location = new System.Drawing.Point(0, 559);
             this.drawButton.Name = "drawButton";
             this.drawButton.Size = new System.Drawing.Size(258, 47);
             this.drawButton.TabIndex = 1;
@@ -119,6 +119,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(258, 606);
             this.panel1.TabIndex = 9;
+            // 
+            // live_preview_check_box
+            // 
+            this.live_preview_check_box.AutoSize = true;
+            this.live_preview_check_box.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.live_preview_check_box.Location = new System.Drawing.Point(126, 493);
+            this.live_preview_check_box.Name = "live_preview_check_box";
+            this.live_preview_check_box.Size = new System.Drawing.Size(126, 25);
+            this.live_preview_check_box.TabIndex = 26;
+            this.live_preview_check_box.Text = "Live preview";
+            this.live_preview_check_box.UseVisualStyleBackColor = true;
             // 
             // equation_2
             // 
@@ -295,7 +306,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(992, 60);
+            this.panel4.Size = new System.Drawing.Size(922, 60);
             this.panel4.TabIndex = 10;
             this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseDown);
             this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel4_MouseMove);
@@ -311,7 +322,7 @@
             this.minimalize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimalize.ForeColor = System.Drawing.Color.Black;
             this.minimalize.Image = ((System.Drawing.Image)(resources.GetObject("minimalize.Image")));
-            this.minimalize.Location = new System.Drawing.Point(874, 3);
+            this.minimalize.Location = new System.Drawing.Point(804, 3);
             this.minimalize.Name = "minimalize";
             this.minimalize.Size = new System.Drawing.Size(50, 51);
             this.minimalize.TabIndex = 2;
@@ -328,7 +339,7 @@
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.ForeColor = System.Drawing.Color.Black;
             this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(930, 3);
+            this.exit.Location = new System.Drawing.Point(860, 3);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(50, 51);
             this.exit.TabIndex = 1;
@@ -350,23 +361,12 @@
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // live_preview_check_box
-            // 
-            this.live_preview_check_box.AutoSize = true;
-            this.live_preview_check_box.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.live_preview_check_box.Location = new System.Drawing.Point(126, 493);
-            this.live_preview_check_box.Name = "live_preview_check_box";
-            this.live_preview_check_box.Size = new System.Drawing.Size(126, 25);
-            this.live_preview_check_box.TabIndex = 26;
-            this.live_preview_check_box.Text = "Live preview";
-            this.live_preview_check_box.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(992, 665);
+            this.ClientSize = new System.Drawing.Size(922, 666);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.drawingPlace);
