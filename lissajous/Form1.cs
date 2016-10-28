@@ -12,17 +12,14 @@ namespace lissajous
 {
     public partial class Form1 : Form
     {
-        List<PointF> pointsList = new List<PointF>();
-        Graphics drawArea;
         float x_angle;
         int mouse_position_x, mouse_position_y;
         bool togMove;
         public Form1()
         {
             InitializeComponent();
-            drawArea = drawingPlace.CreateGraphics();
             timer1.Enabled = true;
-
+            calculate_points(false);
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -54,8 +51,8 @@ namespace lissajous
         private void calculate_points(bool rotate)
         {
             float x, y;
-            float screen_width_center = drawingPlace.Size.Width / 2,
-                  screen_height_center = drawingPlace.Size.Height / 2;
+            float screen_width_center = lissajous_chart.Width / 2,
+                  screen_height_center = lissajous_chart.Height / 2;
 
             Pen blackPen = new Pen(Color.Black, 2);
 
@@ -77,20 +74,14 @@ namespace lissajous
             y_freq = Convert.ToInt16(freq_y.Value);
             y_angle = (Convert.ToSingle(Convert.ToSingle(phase_y.Value) * (Math.PI) / 180));
 
+            lissajous_chart.Series[0].Points.Clear();
             double t_max = Math.PI * 2 + Math.PI / 180, t;
             for (t = 0; t <= t_max; t += Math.PI / 360)
             {
                 x = (screen_width_center + Convert.ToSingle(x_amp * Math.Sin(x_freq * t + x_angle)));
                 y = (screen_height_center + Convert.ToSingle(y_amp * Math.Sin(y_freq * t + y_angle)));
-                pointsList.Add(new PointF(x, y));
                 lissajous_chart.Series[0].Points.AddXY(x, y);
             }
-
-            Bitmap plane = new Bitmap(drawingPlace.Width, drawingPlace.Height);
-            drawArea = Graphics.FromImage(plane);
-            drawArea.DrawLines(blackPen, pointsList.ToArray());
-            drawingPlace.Image = plane;
-            pointsList.Clear();
         }
 
         private void panel4_MouseDown(object sender, MouseEventArgs e)
@@ -109,7 +100,6 @@ namespace lissajous
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
 
         private void panel4_MouseMove(object sender, MouseEventArgs e)
         {
